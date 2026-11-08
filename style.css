@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: oldlace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.principal{
+    background-image: url(./wallpaper.webp);
+    background-size: cover;
+    width: 300px;
+    border-radius: 50px;
+    border: solid 7px black;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9px;
+}    
+
+.notch{
+    background-color: black;
+    height: 30px;
+    width: 100px;
+    border-radius: 35px;
+    border: none;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}
+.notch .aparece{
+    opacity: 0;
+}
+
+.notch:hover{
+    width: 130px;
+}
+
+.icons{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.flash{
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(1px);
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 30px;
+    border-top: solid .3px white;
+    border-bottom: solid .2px white;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all ease-in-out;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flash:hover{
+    scale: 1.4;
+}
+
+.camera{
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(1px);
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+    border: none;
+    border-top: solid .3px white;
+    border-bottom: solid .2px white;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all ease-in-out;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.camera:hover{
+    scale: 1.4;
+}
+.luz{
+    width: 100%;
+    height: 100%;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+}
+
+.ligado{
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.aparece{
+    size: 0;
+    opacity: 0;;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.abriuF{
+    width: 130px;
+    background-color: black;
+    height: 30px;
+    border-radius: 35px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.abriuF:hover{
+    width: 150px;
+    padding: 15px;
+    height: 200px;
+    border-radius: 45px;
+    padding-top: 30px;
+}
+.abriuF:hover .aparece{
+    opacity: 1;
+    display: block;
+    size: 1;
+}
