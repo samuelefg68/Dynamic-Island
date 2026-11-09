@@ -17,4 +17,12 @@ function acende(){
     camera.classList.toggle('usc')
 }
 
+function plim() {
+    notch.classList.add("notif");
+
+    setTimeout(() => {
+        notch.classList.remove("notif");
+    }, 2000);
+}
+
 

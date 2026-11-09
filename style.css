@@ -127,6 +127,7 @@ body{
 .abriuF .verde{
     opacity: 1;
     size: 1;
+    background-color: rgb(255, 255, 194);
 }
 
 .abriuF:hover{
@@ -198,4 +199,33 @@ body{
     100%{
         transform: translateY(0);
     }
+}
+
+.legenda{
+    color: white;
+    margin-bottom: 8px;
+    animation: fade 3s ease-in-out;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.notif{
+    width: 200px;
+    background-color: black;
+    height: 80px;
+    border-radius: 35px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    padding: 10px;
 }
