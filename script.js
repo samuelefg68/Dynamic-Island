@@ -1,8 +1,11 @@
 const lanterna = document.getElementById("lampada");
 const notch = document.getElementById("island");
-const camera = document.getElementById("cam")
+const camera = document.getElementById("cam");
+const texto = document.getElementById('garrafa');
+const alarme = document.getElementById('alarme');
+
 function liga(){
-    if (camera.classList.contains('usc')){
+    if (camera.classList.contains('usandocam')){
         return; 
     }
     lanterna.classList.toggle('ligado');
@@ -14,15 +17,25 @@ function acende(){
         return; 
     }
     notch.classList.toggle('abriuC');
-    camera.classList.toggle('usc')
+    camera.classList.toggle('usandocam')
 }
 
 function plim() {
+    if (lanterna.classList.contains('ligado') || camera.classList.contains('usandocam')){
+        alarme.textContent = "Desative tudo para usar a Siri"
+        return;
+    }else{
+        alarme.textContent = ""
+    }
     notch.classList.add("notif");
-
+    texto.textContent = "☸ Hello World"
+    notch.classList.remove("notch")
     setTimeout(() => {
         notch.classList.remove("notif");
-    }, 2000);
+        texto.textContent = ""
+        notch.classList.add("notch")
+    }, 1000);
+
 }
 
 

@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -12,6 +12,8 @@ body{
     align-items: center;
     background-size: cover;
 }
+
+/*    CORPO    */
 
 .principal{
     background-image: url(./wallpaper.webp);
@@ -25,7 +27,10 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 9px;
+    margin-left: 100px;
 }    
+
+/*    NOTCH    */
 
 .notch{
     background-color: black;
@@ -34,6 +39,8 @@ body{
     border-radius: 35px;
     border: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s ease-in-out;
 }
 .notch .aparece{
@@ -44,36 +51,21 @@ body{
     width: 130px;
 }
 
+/*    ICONES    */
+
 .icons{
     margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-bottom: 7px;
 }
 
-.flash{
-    background-color: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(1px);
-    height: 55px;
-    width: 55px;
-    border: none;
-    border-radius: 30px;
-    border-top: solid .3px white;
-    border-bottom: solid .2px white;
-    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.4);
-    transition: 0.2s all ease-in-out;
-    padding: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .flash:hover{
     scale: 1.4;
 }
 
-.camera{
+.camera, .flash{
     background-color: rgba(255, 255, 255, .2);
     backdrop-filter: blur(1px);
     height: 55px;
@@ -101,16 +93,17 @@ body{
     height: 100%;
 }
 
-.ligado, .usc{
+.ligado, .usandocam{
     background-color: rgb(255, 255, 255, .7);
 }
 
 .aparece{
     size: 0;
-    opacity: 0;;
+    opacity: 0;
     width: 100%;
     height: 100%;
     transition: all 0.2s ease-in-out;
+    display: none;
 }
 
 .abriuF{
@@ -130,6 +123,7 @@ body{
     background-color: rgb(255, 255, 194);
 }
 
+
 .abriuF:hover{
     width: 150px;
     padding: 15px;
@@ -143,8 +137,7 @@ body{
     size: 1;
 }
 .abriuF:hover .verde{
-    opacity: 0;
-    size: 0;
+    display: none;
 }
 
 .verde{
@@ -154,8 +147,9 @@ body{
     width: 10px;
     background-color: rgb(27, 207, 27);
     border-radius: 5px;
-    margin: auto;
+    margin-right: auto;
     transition: all 0.2s ease-in-out;
+    flex-shrink: 0;
 }
 
 .abriuC{
@@ -228,4 +222,44 @@ body{
     transition: all 0.2s ease-in-out;
     display: flex;
     padding: 10px;
+    justify-content: center;
+}
+
+.notif #garrafa{
+    size: 1;
+    opacity: 1;
+}
+
+.notif .aparece, .notif .verde, .notif .luz {
+    display: none;
+}
+.abriuF #garrafa, .abriuC #garrafa {
+    display: none;
+}
+
+#garrafa{
+    color: white; 
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: auto;
+    opacity: 0;
+    size: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.mensagem{
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.botoes{
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    background-color: black;
+    font-weight: bold;
+    box-shadow: 0 0 7px purple;
 }
